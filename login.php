@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $user['password'])) {
             // Login successful
             $_SESSION['user_id'] = $user['id'];
-            header("Location: index.php");
+            header("Location: motordash/index.php");
             exit();
         } else {
             echo "<script>alert('Invalid password.');</script>";

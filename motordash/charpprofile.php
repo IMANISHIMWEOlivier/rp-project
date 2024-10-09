@@ -47,37 +47,123 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home </title>
-    <link rel="stylesheet" href="indexstyle.css">
+    <title>Motorist Profile and Chat</title>
     <link rel="stylesheet" href="profilestyle.css">
     <link rel="stylesheet" href="chatstyle.css">
+    <style>
+        /* Add custom styles here */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px; /* Add some space between columns */
+        }
+
+        /* Profile Section */
+        .profile {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .profile-info p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .profile-info a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .profile-info a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Chat Section */
+        .chat-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-box {
+            height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .chat-box .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #e6f7ff;
+            font-size: 16px;
+        }
+
+        .chat-box .message.sender {
+            background-color: #e0ffe0;
+            text-align: right;
+        }
+
+        #chat-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        #message {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-<!-- <h1><?//php echo"<script>alert('". $greeting ."');</script>"; ?></h1> -->
 
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-    <div class="logo">
-        <a href="index.php"><img src="uploads/g0000.png" alt="Logo"></a>
-    </div>
-    <ul class="nav-links">
-        <li><a href="dashmotor.php">Profile</a></li>
-        <li><a href="#contact">Massege</a></li>
-        <li><a href="logout.php" class="login-btn">Logout</a></li>
-    </ul>
-    <div class="hamburger">&#9776;</div>
-</nav>
-      <!-- profile and chart -->
-      <div class="container">
+<div class="container">
     <!-- Profile Section -->
     <div class="profile">
         <h1>Motorist Profile</h1>
@@ -118,62 +204,8 @@ $conn->close();
         </form>
     </div>
 </div>
-  
 
+<script src="chat.js"></script>
 
-    <!-- Hero 1 Section -->
-    <section class="hero">
-        <div class="hero-text">
-
-            
-            
-        </div>
-        </section>
-          <br><br><br><br>
-<!--- service section --->
-<?php
-//include"motorcyclistdecription.php";
-?>
-<!--- about section --->
-
-    
-
-            <!-- Emergency Contacts -->
-            <div class="column emergency-contacts">
-                <h2>Emergency Contacts</h2>
-                <ul>
-                    <li><strong>Company Email:</strong> support@motorcycleapp.com</li>
-                    <li><strong>Police Emergency Contact:</strong> 112</li>
-                    <li><strong>RURA Contact:</strong> +250 788 155 100</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            
-        
-        <p>&copy; 2024 Real-time Motorcycle Ride-Hailing System. All rights reserved.</p>
-    
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<ul class="social-icons">
-    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
-
-    <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-
-    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-</ul>
-
-        </div>
-    </footer>
-
-    <script src="indexscript.js"></script>
-    <script src="chat.js"></script>
 </body>
 </html>
-
-
-
-

@@ -1,14 +1,14 @@
 <?php
 // Simple example for using PHP in the index page
-$greeting = "Welcome to My Website";
+// $greeting = "Welcome to My Website";
 
-if (date("H") < 12) {
-    $greeting = "Good Morning!";
-} else if (date("H") < 18) {
-    $greeting = "Good Afternoon!";
-} else {
-    $greeting = "Good Evening!";
-}
+// if (date("H") < 12) {
+//     $greeting = "Good Morning!";
+// } else if (date("H") < 18) {
+//     $greeting = "Good Afternoon!";
+// } else {
+//     $greeting = "Good Evening!";
+// }
 ?>
 
 
@@ -21,7 +21,7 @@ if (date("H") < 12) {
     <link rel="stylesheet" href="indexstyle.css">
 </head>
 <body>
-<h1><?php echo"<script>alert('". $greeting ."');</script>"; ?></h1>
+<!-- <h1><?//php echo"<script>alert('". $greeting ."');</script>"; ?></h1> -->
 
 
     <!-- Navigation Bar -->

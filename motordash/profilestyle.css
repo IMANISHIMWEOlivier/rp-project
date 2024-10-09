@@ -1,0 +1,62 @@
+
+.profile {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.profile-picture {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.profile-info p strong {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        padding: 15px;
+    }
+
+    .profile-info p {
+        font-size: 1em;
+    }
+}
+/* CSS for the Edit button link */
+/*a {
+    text-decoration: none; /* Remove underline from the link */
+    display: inline-block;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color change on hover */
+}
+
+a:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+*/
